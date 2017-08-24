@@ -1,0 +1,24 @@
+{
+  "name": "macros-calculator",
+  "version": "2.0.0",
+  "description": "A macro nutrients calculator, using the teaches from Caio Bottura's book with the name of Dieta Flexivel",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "eslint-config-rallycoding": "^3.2.0",
+    "prop-types": "^15.5.10",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "webpack": "^1.12.9"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^1.16.5"
+  },
+  "scripts": {
+    "start": "node server",
+    "build": "webpack",
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "github/matalmeida",
+  "license": "MIT"
+}
