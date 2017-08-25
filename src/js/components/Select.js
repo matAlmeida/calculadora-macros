@@ -1,4 +1,4 @@
-// Example:
+// Data example:
 // <Select id="test" label="teste">
 //     {[
 //         {
@@ -13,12 +13,15 @@
 // </Select>
 
 import React from 'react';
+import {
+    Input,
+} from 'react-materialize';
 
 class Select extends React.Component {
     getOptions() {
         const options = [];
 
-        this.props.children.forEach(function(option) {
+        this.props.children.forEach(option => {
             options.push(
                 <option key={option.key}>
                     {option.optionLabel}
@@ -31,13 +34,9 @@ class Select extends React.Component {
 
     render() {
         return (
-            <div>
-                <label htmlFor={this.props.id}>
-                    {this.props.label}: </label>
-                <select name={this.props.id} id={this.props.id}>
-                    {this.getOptions()}
-                </select>
-            </div>
+            <Input type='select' label={this.props.label} s={12} m={6}>
+                {this.getOptions()}
+            </Input>
         );
     }
 }

@@ -1,12 +1,18 @@
 import React from 'react';
+import {
+    Input,
+} from 'react-materialize';
 
 class Field extends React.Component {
     render() {
         return (
-            <div>
-                <label htmlFor={this.props.id}>{this.props.label}: </label>
-                <input id={this.props.id} type={this.props.type}/>
-            </div>
+            <Input
+                type={this.props.type}
+                validate={this.props.validate}
+                label={this.props.label}
+                s={12}
+                m={6}
+            />
         );
     }
 }
