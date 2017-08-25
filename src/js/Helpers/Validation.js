@@ -1,9 +1,5 @@
 class Validation {
 
-    constructor() {
-        throw new Error('This class is just a helper');
-    }
-
     _validateEntry(entry) {
         return entry.indexOf(',') >= 0 ? parseFloat(entry.replace(',', '.')) : entry;
     }
@@ -14,6 +10,20 @@ class Validation {
         const validMajor = this.validateEntry(major);
 
         return validEntry <= validMinor || validEntry >= validMajor ? new Error('Invalid entry') : true;
+    }
+
+    static verifyEmpty(entry) {
+        return (
+            entry === ''
+            || entry === null
+            || entry === undefined
+            || isNaN(entry)
+            || entry === false
+        );
+    }
+
+    static verifySelectionOfTwo(entry, zeroOption) {
+        return entry === zeroOption ? 0 : 1;
     }
 }
 
