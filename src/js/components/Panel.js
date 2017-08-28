@@ -4,10 +4,10 @@ import {
     Card
 } from 'react-materialize';
 
-const Panel = ({ label, children }) => {
+const Panel = ({ label, children, color }) => {
     return (
         <Col m={4} s={12}>
-            <Card className='red darken-2' textClassName='white-text' title={label} m={4} s={12}>
+            <Card className={color} textClassName='white-text' title={label} m={4} s={12}>
                 {children}
             </Card>
         </Col>
