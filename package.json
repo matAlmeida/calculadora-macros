@@ -1,6 +1,6 @@
 {
   "name": "macros-calculator",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "A macro nutrients calculator, using the teaches from Caio Bottura's book with the name of Dieta Flexivel",
   "main": "webpack.config.js",
   "dependencies": {
