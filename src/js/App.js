@@ -113,7 +113,7 @@ class App extends React.Component {
                             color='green darken-2'
                             label="Caloria total semanal"
                         >
-                            {this.state.fat * 7} kcal
+                            {this.state.dailyCal * 7} kcal
                         </Panel>
                     </Col>
                 </Row>
