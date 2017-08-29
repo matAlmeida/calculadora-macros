@@ -72,7 +72,8 @@ class MacroForm extends React.Component {
                                 />
                                 <Field
                                     id="fieldCaloricDefict"
-                                    label="Diferença Calorica (kcal)"
+                                    label="Calorias de manutenção (kcal)"
+                                    placeholder="*Com base no tipo de cálculo escolhido acima"
                                     type="number"
                                     onChange={this.fieldListener.bind(this)}
                                     value={this.state.fieldCaloricDefict}

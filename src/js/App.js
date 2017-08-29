@@ -106,17 +106,7 @@ class App extends React.Component {
                             color='green darken-2'
                             label="Caloria total diaria"
                         >
-<<<<<<< HEAD
-                            {this.state.dailyCal} kcal
-                        </Panel>
-                        <Panel
-                            color='green darken-2'
-                            label="Caloria total semanal"
-                        >
-                            {this.state.dailyCal * 7} kcal
-=======
                             {this.state.dailyCal.toFixed(2)} kcal
->>>>>>> 2.0.1
                         </Panel>
                     </Col>
                 </Row>
