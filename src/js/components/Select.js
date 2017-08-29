@@ -34,7 +34,13 @@ class Select extends React.Component {
 
     render() {
         return (
-            <Input type='select' label={this.props.label} s={12} m={6}>
+            <Input
+                type='select'
+                label={this.props.label}
+                s={12}
+                m={6}
+                onChange={this.props.onChange}
+            >
                 {this.getOptions()}
             </Input>
         );
