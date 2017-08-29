@@ -119,7 +119,6 @@ class UserForm extends React.Component {
                                     id="fieldAge"
                                     label="Idade"
                                     type="number"
-                                    validate
                                     onChange={this.fieldListener.bind(this)}
                                     value={this.state.fieldAge}
                                 />
@@ -127,7 +126,6 @@ class UserForm extends React.Component {
                                     id="fieldWeight"
                                     label="Peso (Kg)"
                                     type="number"
-                                    validate
                                     onChange={this.fieldListener.bind(this)}
                                     value={this.state.fieldWeight}
                                 />
@@ -135,7 +133,6 @@ class UserForm extends React.Component {
                                     id="fieldHeight"
                                     label="Altura (cm)"
                                     type="number"
-                                    validate
                                     onChange={this.fieldListener.bind(this)}
                                     value={this.state.fieldHeight}
                                 />
@@ -143,7 +140,6 @@ class UserForm extends React.Component {
                                     id="fieldCorporalFat"
                                     label="% de Gordura Corporal"
                                     type="number"
-                                    validate
                                     onChange={this.fieldListener.bind(this)}
                                     value={this.state.fieldCorporalFat}
                                 />

@@ -13,7 +13,7 @@ class MacroForm extends React.Component {
         this.state = {
             id: '',
             fieldGperKgFat: 0,
-            fieldGperKgProtain: 0,
+            fieldGperKgProtein: 0,
             fieldCaloricDefict: 0,
             fieldExcerciseTime: 0,
         };
@@ -31,9 +31,9 @@ class MacroForm extends React.Component {
                 this.setState({ fieldGperKgFat: value });
                 this.props.onChange({ ...this.state, fieldGperKgFat: value });
                 break;
-            case 'fieldGperKgProtain':
-                this.setState({ fieldGperKgProtain: value });
-                this.props.onChange({ ...this.state, fieldGperKgProtain: value });
+            case 'fieldGperKgProtein':
+                this.setState({ fieldGperKgProtein: value });
+                this.props.onChange({ ...this.state, fieldGperKgProtein: value });
                 break;
             case 'fieldCaloricDefict':
                 this.setState({ fieldCaloricDefict: value });
@@ -64,11 +64,11 @@ class MacroForm extends React.Component {
                                     value={this.state.fieldGperKgFat}
                                 />
                                 <Field
-                                    id="fieldGperKgProtain"
+                                    id="fieldGperKgProtein"
                                     label="Proteina (g/Kg)"
                                     type="number"
                                     onChange={this.fieldListener.bind(this)}
-                                    value={this.state.fieldGperKgProtain}
+                                    value={this.state.fieldGperKgProtein}
                                 />
                                 <Field
                                     id="fieldCaloricDefict"
