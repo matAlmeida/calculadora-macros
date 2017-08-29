@@ -12,6 +12,9 @@ class Field extends React.Component {
                 label={this.props.label}
                 s={12}
                 m={6}
+                id={this.props.id}
+                placeholder={this.props.placeholder}
+                onChange={this.props.onChange}
             />
         );
     }
