@@ -23,7 +23,7 @@ class Select extends React.Component {
 
         this.props.children.forEach(option => {
             options.push(
-                <option key={option.key}>
+                <option value={option.key} key={option.key}>
                     {option.optionLabel}
                 </option>
             );
@@ -39,6 +39,7 @@ class Select extends React.Component {
                 label={this.props.label}
                 s={12}
                 m={6}
+                id={this.props.id}
                 onChange={this.props.onChange}
             >
                 {this.getOptions()}

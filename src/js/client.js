@@ -9,21 +9,12 @@ import {
 import Panel from './components/Panel';
 import UserForm from './Containers/UserForm';
 import MacroForm from './Containers/MacroForm';
+import Form from './Containers/Form';
 
 const app = document.getElementById('app');
 render(
     <div>
-        <Row>
-            <UserForm id="userForm" title="Suas Informações" />
-        </Row>
-        <Row>
-            <MacroForm id="macroForm" title="Macro Nutrientes" />
-        </Row>
-        <Row>
-            <Col offset="s3 m5">
-                <Button large waves='light' node='a'> Calcular Macros </Button>
-            </Col>
-        </Row>
+        <Form />
 
         <Row>
             <Col offset="s0 m1" s={12} m={10}>
