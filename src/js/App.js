@@ -44,7 +44,6 @@ class App extends React.Component {
         this.calculator.updateForms(this.state.userForm, this.state.macroForm);
         const newMacros = this.calculator.calculate();
         this.setState({ ...newMacros });
-        console.log(newMacros);
     }
 
     render() {
@@ -83,30 +82,31 @@ class App extends React.Component {
                             color='amber darken-2'
                             label="Carboidrato"
                         >
-                            {this.state.carbo} g
+                            {this.state.carbo.toFixed(2)} g
                         </Panel>
                         <Panel
                             color='red darken-2'
                             label="Proteina"
                         >
-                            {this.state.protein} g
+                            {this.state.protein.toFixed(2)} g
                         </Panel>
                         <Panel
                             color='grey'
                             label="Gordura"
                         >
-                            {this.state.fat} g
+                            {this.state.fat.toFixed(2)} g
                         </Panel>
                         <Panel
                             color='brown lighten-1'
                             label="Fibra"
                         >
-                            {this.state.fiber} g
+                            {this.state.fiber.toFixed(2)} g
                         </Panel>
                         <Panel
                             color='green darken-2'
                             label="Caloria total diaria"
                         >
+<<<<<<< HEAD
                             {this.state.dailyCal} kcal
                         </Panel>
                         <Panel
@@ -114,6 +114,9 @@ class App extends React.Component {
                             label="Caloria total semanal"
                         >
                             {this.state.dailyCal * 7} kcal
+=======
+                            {this.state.dailyCal.toFixed(2)} kcal
+>>>>>>> 2.0.1
                         </Panel>
                     </Col>
                 </Row>

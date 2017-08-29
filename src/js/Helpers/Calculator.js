@@ -7,6 +7,7 @@ class Calculator {
         this.userHeight = userForm.fieldHeight;
         this.userFat = userForm.fieldCorporalFat;
         
+        this.calcDefictType = userForm.selectCalc;
         this.calcType = userForm.selectCalcType;
         this.calcFat = macroForm.fieldGperKgFat;
         this.calcProtein = macroForm.fieldGperKgProtein;
@@ -29,6 +30,7 @@ class Calculator {
         this.userHeight = userForm.fieldHeight;
         this.userFat = userForm.fieldCorporalFat;
         
+        this.calcDefictType = userForm.selectCalc;
         this.calcType = userForm.selectCalcType;
         this.calcFat = macroForm.fieldGperKgFat;
         this.calcProtein = macroForm.fieldGperKgProtein;
@@ -79,6 +81,10 @@ class Calculator {
     }
 
     _calcFiber() {
+        if (this.calcDefictType !== 'loseWeight') {
+            this.calcDefict *= -1;
+        }
+
         this.resultFiber = ((this.resultDailyCal - this.calcDefict) / 1000) * 15;
     }
 
