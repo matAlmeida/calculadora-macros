@@ -42,8 +42,9 @@ class App extends React.Component {
 
     formSubmit() {
         this.calculator.updateForms(this.state.userForm, this.state.macroForm);
-        const a = this.calculator.calculate();
-        console.log(a);
+        const newMacros = this.calculator.calculate();
+        this.setState({ ...newMacros });
+        console.log(newMacros);
     }
 
     render() {

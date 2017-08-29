@@ -1,3 +1,29 @@
+/*
+<Select
+    id="selectCalcType"
+    label="Tipo de cálculo"
+    onChange={this.fieldListener.bind(this)}
+    value={this.state.selectCalcType}
+>
+    {[
+        {
+            key: 'withoutCorporalFat',
+            optionLabel: 'Sem % de gordura corporal'
+        },
+        {
+            key: 'withCorporalFat',
+            optionLabel: 'Com % de gordura corporal'
+        },
+    ]}
+</Select>
+<Field
+    id="fieldCorporalFat"
+    label="% de Gordura Corporal"
+    type="number"
+    onChange={this.fieldListener.bind(this)}
+    value={this.state.fieldCorporalFat}
+/>
+*/
 import React from 'react';
 import {
     CardPanel,
@@ -17,7 +43,7 @@ class UserForm extends React.Component {
             id: '',
             fieldName: '',
             selectSex: 'man',
-            selectCalcType: 'withCorporalFat',
+            selectCalcType: 'withoutCorporalFat',
             fieldAge: 0,
             fieldWeight: 0,
             fieldHeight: 0,
@@ -98,23 +124,6 @@ class UserForm extends React.Component {
                                         },
                                     ]}
                                 </Select>
-                                <Select
-                                    id="selectCalcType"
-                                    label="Tipo de cálculo"
-                                    onChange={this.fieldListener.bind(this)}
-                                    value={this.state.selectCalcType}
-                                >
-                                    {[
-                                        {
-                                            key: 'withCorporalFat',
-                                            optionLabel: 'Com % de gordura corporal'
-                                        },
-                                        {
-                                            key: 'withoutCorporalFat',
-                                            optionLabel: 'Sem % de gordura corporal'
-                                        },
-                                    ]}
-                                </Select>
                                 <Field
                                     id="fieldAge"
                                     label="Idade"
@@ -135,13 +144,6 @@ class UserForm extends React.Component {
                                     type="number"
                                     onChange={this.fieldListener.bind(this)}
                                     value={this.state.fieldHeight}
-                                />
-                                <Field
-                                    id="fieldCorporalFat"
-                                    label="% de Gordura Corporal"
-                                    type="number"
-                                    onChange={this.fieldListener.bind(this)}
-                                    value={this.state.fieldCorporalFat}
                                 />
                             </Col>
                         </Row>

@@ -13,6 +13,7 @@ class Field extends React.Component {
                 s={12}
                 m={6}
                 id={this.props.id}
+                placeholder={this.props.placeholder}
                 onChange={this.props.onChange}
             />
         );
