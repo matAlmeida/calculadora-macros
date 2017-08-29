@@ -29,6 +29,7 @@ import {
     CardPanel,
     Col,
     Row,
+    Input,
 } from 'react-materialize';
 import {
     Field,
@@ -48,6 +49,7 @@ class UserForm extends React.Component {
             fieldWeight: 0,
             fieldHeight: 0,
             fieldCorporalFat: 0,
+            selectCalc: 'loseWeight',
         };
     }
 
@@ -87,6 +89,10 @@ class UserForm extends React.Component {
                 this.setState({ fieldCorporalFat: value });
                 this.props.onChange({ ...this.state, fieldCorporalFat: value });
                 break;
+            case 'selectCalc':
+                this.setState({ selectCalc: value });
+                this.props.onChange({ ...this.state, selectCalc: value });
+                break;
             default:
                 break;
         }
@@ -121,6 +127,23 @@ class UserForm extends React.Component {
                                         {
                                             key: 'woman',
                                             optionLabel: 'Mulher'
+                                        },
+                                    ]}
+                                </Select>
+                                <Select
+                                    id="selectCalc"
+                                    label="Tipo de cálculo"
+                                    onChange={this.fieldListener.bind(this)}
+                                    value={this.state.selectCalcType}
+                                >
+                                    {[
+                                        {
+                                            key: 'loseWeight',
+                                            optionLabel: 'Perda de massa'
+                                        },
+                                        {
+                                            key: 'gainWeight',
+                                            optionLabel: 'Ganho de massa'
                                         },
                                     ]}
                                 </Select>
