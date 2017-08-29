@@ -49,7 +49,7 @@ class UserForm extends React.Component {
             fieldWeight: 0,
             fieldHeight: 0,
             fieldCorporalFat: 0,
-            selectCalc: 'loseWeight',
+            selectCalc: 'gainWeight',
         };
     }
 
@@ -138,12 +138,12 @@ class UserForm extends React.Component {
                                 >
                                     {[
                                         {
-                                            key: 'loseWeight',
-                                            optionLabel: 'Perda de massa'
-                                        },
-                                        {
                                             key: 'gainWeight',
                                             optionLabel: 'Ganho de massa'
+                                        },
+                                        {
+                                            key: 'loseWeight',
+                                            optionLabel: 'Perda de peso'
                                         },
                                     ]}
                                 </Select>
