@@ -34,3 +34,4 @@ chrome-user-data
 !src/node_modules
 src/client.min.js
 src/keys
+package-lock.json
