@@ -8,7 +8,7 @@ const build = args.p;
 module.exports = {
   context: path.join(__dirname, 'src'),
   // devtool: debug ? "inline-sourcemap" : false,
-  devtool: build ? undefined : 'inline-sorcemap',
+  devtool: build ? undefined : 'inline-sourcemap',
   entry: './js/client.js',
   module: {
     loaders: [

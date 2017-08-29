@@ -3,6 +3,9 @@ import {
     Row,
     Col,
     Button,
+    Footer,
+    Navbar,
+    NavItem,
 } from 'react-materialize';
 
 import Panel from './components/Panel';
@@ -49,6 +52,12 @@ class App extends React.Component {
     render() {
         return (
             <div>
+                <Row>
+                <Navbar className="teal" brand='Macro Nutrientes' right>
+                    <NavItem href='https://coisasdeatleta.com/livros/'>Comprar o livro</NavItem>
+                    <NavItem href='https://github.com/matAlmeida/calculadora-macros'>Ajude a desenvolver</NavItem>
+                </Navbar>
+                </Row>
                 <Row>
                     <UserForm
                         id="userForm"
@@ -109,6 +118,28 @@ class App extends React.Component {
                             {this.state.dailyCal.toFixed(2)} kcal
                         </Panel>
                     </Col>
+                </Row>
+                <Row>
+                <Footer
+                    copyrights="Copyright (c) 2017 Matheus Almeida"
+                    moreLinks={
+                        <a className="grey-text text-lighten-4 right" href="https://github.com/matAlmeida/calculadora-macros">Ajude a desenvolver</a>
+                    }
+                    links={
+                        <ul>
+                            <li><a className="grey-text text-lighten-3" href="https://twitter.com/mat_almeida"><b>Meu Twitter</b></a></li>
+                            <li><a className="grey-text text-lighten-3" href="https://github.com/matAlmeida"><b>Meu GitHub</b></a></li>
+                            <li><a className="grey-text text-lighten-3" href="https://www.facebook.com/caio.bottura"><b>Caio Bottura</b></a></li>
+                            <li><a className="grey-text text-lighten-3" href="https://coisasdeatleta.com/livros/"><b>Livro Dieta Flexível</b></a></li>
+                        </ul>
+                    }
+                    className='teal'
+                >
+                        <h5 className="white-text">Sobre a calculadora</h5>
+                        <p className="grey-text text-lighten-4">
+                            Este projeto é uma calculadora Macro Nutrients e usa os ensinamentos do livro do Caio Bottura, Dieta Flexível & Nutrição.
+                        </p>
+                </Footer>
                 </Row>
             </div>
         );
