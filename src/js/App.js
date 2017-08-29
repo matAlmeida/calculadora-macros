@@ -8,6 +8,7 @@ import {
 import Panel from './components/Panel';
 import UserForm from './Containers/UserForm';
 import MacroForm from './Containers/MacroForm';
+import Calculator from './Helpers/Calculator';
 
 class App extends React.Component {
     constructor(props) {
@@ -20,8 +21,10 @@ class App extends React.Component {
             protein: 0,
             fat: 0,
             fiber: 0,
-            totalCal: 0,
+            dailyCal: 0,
         };
+
+        this.calculator = new Calculator(this.state.userForm, this.state.macroForm);
     }
 
     formListener(form) {
@@ -38,7 +41,9 @@ class App extends React.Component {
     }
 
     formSubmit() {
-        console.log(this.state);
+        this.calculator.updateForms(this.state.userForm, this.state.macroForm);
+        const a = this.calculator.calculate();
+        console.log(a);
     }
 
     render() {
@@ -101,7 +106,7 @@ class App extends React.Component {
                             color='green darken-2'
                             label="Caloria total diaria"
                         >
-                            {this.state.totalCal} kcal
+                            {this.state.dailyCal} kcal
                         </Panel>
                         <Panel
                             color='green darken-2'
