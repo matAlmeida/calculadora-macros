@@ -20,6 +20,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
+    "compression-webpack-plugin": "^1.0.0",
     "eslint-config-rallycoding": "^3.2.0",
     "express": "^4.15.4",
     "prop-types": "^15.5.10",
@@ -27,8 +28,8 @@
   },
   "scripts": {
     "start": "node server",
-    "build": "webpack -p",
-    "buildDev": "webpack",
+    "build": "webpack --config webpack.config.prod.js -p",
+    "devBuild": "webpack --config webpack.config.js",
     "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -33,5 +33,6 @@ chrome-user-data
 *react*min*.js
 !src/node_modules
 src/client.min.js
+src/client.min.js.gz
 src/keys
 package-lock.json

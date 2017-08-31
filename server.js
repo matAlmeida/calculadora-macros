@@ -1,4 +1,5 @@
 const express = require('express');
+
 const app = express();
 
 app.all('/js/*', (req, res, next) => {
@@ -13,8 +14,15 @@ app.all('/style/*', (req, res, next) => {
     });
 });
 
+app.get('*.js', (req, res, next) => {
+    req.url = `${req.url}.gz`;
+    res.set('Content-Encoding', 'gzip');
+    next();
+});
+
 app.use(express.static('src'));
 
+
 app.listen(8080, () => {
-    console.log('Example app listening on port 3k!');
+    console.log('Serving in port 8080');
 });
