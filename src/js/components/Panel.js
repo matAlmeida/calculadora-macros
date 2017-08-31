@@ -7,7 +7,7 @@ import {
 const Panel = ({ label, children, color }) => {
     return (
         <Col m={4} s={12}>
-            <Card className={color} textClassName='white-text' title={label} m={4} s={12}>
+            <Card className={color} textClassName='white-text' title={label}>
                 {children}
             </Card>
         </Col>

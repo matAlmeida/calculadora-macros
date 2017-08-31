@@ -1,9 +1,13 @@
 const webpack = require('webpack');
 const path = require('path');
+const args = require('yargs').argv;
+const CompressionPlugin = require('compression-webpack-plugin');
+
+const build = args.p;
 
 module.exports = {
   context: path.join(__dirname, 'src'),
-  devtool: 'inline-sourcemap',
+  devtool: build ? undefined : 'inline-sourcemap',
   entry: './js/client.js',
   module: {
     rules: [
@@ -31,8 +35,17 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify('development')
+        NODE_ENV: JSON.stringify('production')
       }
     }),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.UglifyJsPlugin({ mangle: false }),
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
+    })
   ],
 };
