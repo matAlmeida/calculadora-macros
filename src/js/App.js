@@ -8,9 +8,9 @@ import {
     NavItem,
 } from 'react-materialize';
 
-import Panel from './components/Panel';
-import UserForm from './Containers/UserForm';
-import MacroForm from './Containers/MacroForm';
+import Panel from './Components/Dumb/Panel';
+import UserForm from './Components/Smart/UserForm';
+import MacroForm from './Components/Smart/MacroForm';
 import Calculator from './Helpers/Calculator';
 
 class App extends React.Component {
