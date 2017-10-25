@@ -6,12 +6,12 @@ import {
     Row,
 } from 'react-materialize';
 
-import * as User from '../../actions/userActions';
+import * as User from '../actions/userActions';
 
 import {
     Field,
     Select,
-} from '../Dumb';
+} from '../components';
 
 @connect((store) => {
     return {

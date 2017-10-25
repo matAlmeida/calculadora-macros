@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
-
-import user from './userReducer';
-import macro from './macroReducer';
+import user from './user_reducer';
+import macro from './macro_reducer';
 
 export default combineReducers({
     user,

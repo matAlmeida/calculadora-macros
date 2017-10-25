@@ -4,7 +4,7 @@ import {
     Col,
     Row,
 } from 'react-materialize';
-import { Field } from '../Dumb';
+import { Field } from '../components';
 
 class MacroForm extends React.Component {
     constructor(props) {
