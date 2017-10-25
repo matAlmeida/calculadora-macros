@@ -10,6 +10,6 @@ class MacroContainer extends Component {
     }
 }
 // this uses the reducer name
-const mapStateToProps = ({ macro } => { macro });
+const mapStateToProps = ({ macro }) => ({ macro });
 
 export default connect(mapStateToProps, { myType })(MacroContainer);
