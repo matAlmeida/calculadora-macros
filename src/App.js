@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import {
     Row,
     Col,
@@ -9,7 +10,7 @@ import {
 } from 'react-materialize';
 
 import Panel from './components/Panel';
-// import UserForm from './containers/UserForm';
+import UserForm from './containers/UserContainer';
 import MacroForm from './containers/MacroContainer';
 import Calculator from './helpers/Calculator';
 
@@ -59,11 +60,11 @@ class App extends React.Component {
                 </Navbar>
                 </Row>
                 <Row>
-                    {/* <UserForm
+                    <UserForm
                         id="userForm"
                         title="Suas Informações"
                         onChange={this.formListener.bind(this)}
-                    /> */}
+                    />
                 </Row>
                 <Row>
                     <MacroForm
@@ -146,4 +147,6 @@ class App extends React.Component {
     }
 }
 
-export default App;
+const mapStateToProps = ({ field }) => ({ field });
+
+export default connect(mapStateToProps)(App);
