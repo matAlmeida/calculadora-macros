@@ -1,1 +1,1 @@
-export const MY_TYPE = 'my_type';
+export const GET_FIELD_VALUE = 'get_field_value';

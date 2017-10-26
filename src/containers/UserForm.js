@@ -6,18 +6,13 @@ import {
     Row,
 } from 'react-materialize';
 
-import * as User from '../actions/userActions';
+import * as User from '../actions/user_actions';
 
 import {
     Field,
     Select,
 } from '../components';
 
-@connect((store) => {
-    return {
-        user: store.user,
-    };
-})
 class UserForm extends React.Component {
     componentDidMount() {
         this.props.dispatch(User.changeId(this.props.id));

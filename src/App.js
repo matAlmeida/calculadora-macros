@@ -1,5 +1,5 @@
 import React from 'react';
-import { 
+import {
     Row,
     Col,
     Button,
@@ -9,8 +9,8 @@ import {
 } from 'react-materialize';
 
 import Panel from './components/Panel';
-import UserForm from './containers/UserForm';
-import MacroForm from './containers/MacroForm';
+// import UserForm from './containers/UserForm';
+import MacroForm from './containers/MacroContainer';
 import Calculator from './helpers/Calculator';
 
 class App extends React.Component {
@@ -59,11 +59,11 @@ class App extends React.Component {
                 </Navbar>
                 </Row>
                 <Row>
-                    <UserForm
+                    {/* <UserForm
                         id="userForm"
                         title="Suas Informações"
                         onChange={this.formListener.bind(this)}
-                    />
+                    /> */}
                 </Row>
                 <Row>
                     <MacroForm
@@ -72,7 +72,7 @@ class App extends React.Component {
                         onChange={this.formListener.bind(this)}
                     />
                 </Row>
-                
+
                 <Row>
                     <Col offset="s3 m5">
                         <Button

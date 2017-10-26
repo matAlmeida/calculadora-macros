@@ -31,7 +31,7 @@
     "start": "node server",
     "build": "webpack --config webpack.config.prod.js -p",
     "devBuild": "webpack --config webpack.config.js",
-    "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
+    "dev": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base src --inline --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Matheus Almeida",

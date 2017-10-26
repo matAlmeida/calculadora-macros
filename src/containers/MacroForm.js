@@ -6,6 +6,13 @@ import {
 } from 'react-materialize';
 import { Field } from '../components';
 
+import {
+	ID_FIELD_GRAMS_PER_KG_FAT,
+	ID_FIELD_GRAMS_PER_KG_PROTEIN,
+	ID_FIELD_CALORIC_DEFICT,
+	ID_FIELD_EXERCISE_TIME,
+} from '../constants';
+
 class MacroForm extends React.Component {
     constructor(props) {
         super(props);
@@ -57,21 +64,21 @@ class MacroForm extends React.Component {
                         <Row>
                             <Col s={12}>
                                 <Field
-                                    id="fieldGperKgFat"
+                                    id={ID_FIELD_GRAMS_PER_KG_FAT}
                                     label="Gordura (g/Kg)"
                                     type="number"
                                     onChange={this.fieldListener.bind(this)}
                                     value={this.state.fieldGperKgFat}
-                                />
+																	/>
                                 <Field
-                                    id="fieldGperKgProtein"
+                                    id={ID_FIELD_GRAMS_PER_KG_PROTEIN}
                                     label="Proteina (g/Kg)"
                                     type="number"
                                     onChange={this.fieldListener.bind(this)}
                                     value={this.state.fieldGperKgProtein}
                                 />
                                 <Field
-                                    id="fieldCaloricDefict"
+                                    id={ID_FIELD_CALORIC_DEFICT}
                                     label="Calorias de manutenção (kcal)"
                                     placeholder="*Com base no tipo de cálculo escolhido acima"
                                     type="number"
@@ -79,7 +86,7 @@ class MacroForm extends React.Component {
                                     value={this.state.fieldCaloricDefict}
                                 />
                                 <Field
-                                    id="fieldExcerciseTime"
+                                    id={ID_FIELD_EXERCISE_TIME}
                                     label="Exercicio diario (min)"
                                     type="number"
                                     onChange={this.fieldListener.bind(this)}

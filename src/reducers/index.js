@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import user from './user_reducer';
-import macro from './macro_reducer';
+import field from './field_reducer';
 
 export default combineReducers({
     user,
-    macro,
+    field,
 });
