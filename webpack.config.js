@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   context: path.join(__dirname, 'src'),
   devtool: 'inline-sourcemap',
-  entry: './js/client.js',
+  entry: './client.js',
   module: {
     rules: [
       {

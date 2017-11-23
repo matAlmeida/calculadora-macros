@@ -4,10 +4,12 @@
   "description": "A macro nutrients calculator, using the teaches from Caio Bottura's book with the name of Dieta Flexivel",
   "main": "webpack.config.js",
   "dependencies": {
+    "express": "^4.15.4",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-materialize": "^1.0.10",
-    "webpack": "^3.5.5",
+    "react-redux": "^5.0.6",
+    "redux": "^3.5.2",
     "yargs": "^8.0.2"
   },
   "devDependencies": {
@@ -22,15 +24,14 @@
     "babel-preset-stage-0": "^6.3.13",
     "compression-webpack-plugin": "^1.0.0",
     "eslint-config-rallycoding": "^3.2.0",
-    "express": "^4.15.4",
-    "prop-types": "^15.5.10",
+    "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
   },
   "scripts": {
-    "start": "node server",
+    "start": "node server/start.js",
     "build": "webpack --config webpack.config.prod.js -p",
     "devBuild": "webpack --config webpack.config.js",
-    "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
+    "dev": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base src --inline --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Matheus Almeida",

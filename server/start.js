@@ -23,6 +23,6 @@ app.get('*.js', (req, res, next) => {
 app.use(express.static('src'));
 
 
-app.listen(8080, () => {
-    console.log('Serving in port 8080');
+app.listen(2222, () => {
+    console.log('Serving in port 2222');
 });
