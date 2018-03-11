@@ -18,7 +18,6 @@ import { getFieldValue } from '../actions';
 
 class MacroContainer extends Component {
 	render() {
-
 		return (
 				<Col offset="s0 m1" s={12} m={10}>
 					<CardPanel>
