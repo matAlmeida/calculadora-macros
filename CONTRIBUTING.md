@@ -13,7 +13,7 @@ Before you begin editing the code, make sure you have [Node](https://nodejs.org)
 
 ### Development
 
-Now that you're all set up, you're ready to edit the code. All code you write should not be dependent on the browser *or* Node. It should be able to run in all Javascript environments.
+Now that you're all set up, you're ready to edit the code. All code you write should not be dependent on the browser *or* Node. It should be able to run in all Javascript environments, except what is inside the `server\` folder.
 
 1. Update files in the `src` folder
 2. During development you can use `npm run dev` for hot-reload, or `npm run devBuild`
@@ -22,9 +22,13 @@ Now that you're all set up, you're ready to edit the code. All code you write sh
 ##### Scripts
 
 ```sh
-$ npm run build # build file in "src" folder
+$ npm run devBuild # build a bundle not compressed
 
-$ npm run dev # runs hot build in the browser
+$ npm run build # build a bundle gziped, requires `npm start` running to serve the gziped file
+
+$ npm start # runs a server to be able to serve a .js.gz file to the index.html
+
+$ npm run dev # runs the dev server and opens it in the browser, with hot-reload
 ```
 
 ##### Commits
@@ -56,17 +60,22 @@ Be sure to put the number of the issue you fixed.
 
 ##### File Structure
 
-* `src` - main source files
-  * `js` - code that will be builded.
-    * `components` - the components.
-    * `Containers` - components with others components that become a considerable part in the site.
-    * `Helpers` - clases with helper methods, like validation and calculations.
-    * `App.js` - main component.
-    * `client.js` - entry point that render the main component.
-  * `styles` - not using at the moment.
-  * `client.min.js` - builded bundle, not compressed
-  * `client.min.js.gz` - builded bundle compressed
-  * `index.html` - first page
+* `server\` - contains the the server files
+	* `start.js` - the node server required to serve with gziped file
+* `src\` - main source files
+	* `actions\` - actions functions and actions types to be used with the reducers.
+	* `components\` - the components without much logic.
+	* `containers\` - components that uses files from components folder.
+	* `helpers\` - clases with helper methods, like validation and calculations.
+	* `modals\` - modal components that can be used in more than one component.
+	* `reducers\` - the reducers(redux).
+	* `screens\` - a full page, will be used to create the routes.
+	* `store\` - contains the file that creates the stores
+	* `App.js` - main component.
+	* `client.js` - entry point that render the main component.
+	* `client.min.js` - bundle created when do `npm devBuild`.
+	* `client.min.js.gz` - bundle created for production with `npm build` (require the `npm start` running to work)
+  * `index.html` - the page that will call the client.min.js
 
 ### Submitting an Issue
 
