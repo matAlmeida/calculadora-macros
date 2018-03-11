@@ -1,8 +1,7 @@
 {
   "name": "macros-calculator",
   "version": "2.0.0-beta.4",
-  "description":
-    "A macro nutrients calculator, using the teaches from Caio Bottura's book with the name of Dieta Flexivel",
+  "description": "A macro nutrients calculator, using the teaches from Caio Bottura's book with the name of Dieta Flexivel",
   "author": "Matheus Almeida <mat.almeida@live.com>",
   "homepage": "https://github.com/matAlmeida/calculadora-macros#readme",
   "keywords": [
@@ -17,13 +16,11 @@
   ],
   "scripts": {
     "lint": "eslint ./src/**/*.js ./server/**/*.js --fix",
-    "start":
-      "webpack --config webpack.config.prod.js -p && node server/start.js",
+    "start": "webpack --config webpack.config.prod.js -p && node server/start.js",
     "build": "webpack --config webpack.config.prod.js -p",
     "devBuild": "webpack --config webpack.config.js",
-    "dev":
-      "node node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base src --inline --hot",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base src --inline --hot",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -43,6 +40,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
+    "babel-jest": "22.4.1",
     "babel-loader": "^7.1.2",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-react-html-attrs": "^2.0.0",
@@ -56,6 +54,7 @@
     "eslint-config-prettier": "2.9.0",
     "eslint-config-rallycoding": "^3.2.0",
     "eslint-plugin-prettier": "2.6.0",
+    "jest": "22.4.2",
     "prettier": "1.11.1",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
