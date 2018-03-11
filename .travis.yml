@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+script:
+  - npm run lint
+  - npm test
+  - npm run build
+deploy:
+  provider: heroku
+  api_key:
+    secure: $heroku_token
+    app: macros-calculator
