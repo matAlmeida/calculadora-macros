@@ -22,6 +22,8 @@ app.get('*.js', (req, res, next) => {
 
 app.use(express.static('src'));
 
-app.listen(2222, () => {
-  console.log('Serving in port 2222');
+const port = process.env.PORT || 2222;
+
+app.listen(port, () => {
+  console.log(`Serving in port ${port}`);
 });

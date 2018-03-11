@@ -17,7 +17,8 @@
   ],
   "scripts": {
     "lint": "eslint ./src/**/*.js ./server/**/*.js --fix",
-    "start": "node server/start.js",
+    "start":
+      "webpack --config webpack.config.prod.js -p && node server/start.js",
     "build": "webpack --config webpack.config.prod.js -p",
     "devBuild": "webpack --config webpack.config.js",
     "dev":
