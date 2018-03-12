@@ -29,6 +29,8 @@ $ npm install
 | Action                    | Usage     |
 | ------------------------- | --------- |
 | Starting development mode | `npm dev` |
+| Run Lint tests            | `npm run lint`|
+| Run Unit tests            | `npm test`|
 
 ## Author
 
