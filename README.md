@@ -1,6 +1,6 @@
 # calculadora-macros
 
-![apm](https://img.shields.io/apm/l/vim-mode.svg?style=for-the-badge) [![Travis branch](https://img.shields.io/travis/matAlmeida/calculadora-macros/master.svg?style=for-the-badge)](https://travis-ci.org/matAlmeida/calculadora-macros)
+[![apm](https://img.shields.io/apm/l/vim-mode.svg?style=for-the-badge)](https://github.com/matAlmeida/calculadora-macros/blob/master/LICENSE) [![Travis branch](https://img.shields.io/travis/matAlmeida/calculadora-macros/master.svg?style=for-the-badge)](https://travis-ci.org/matAlmeida/calculadora-macros)
 
 # [Demo](https://macros-calculator.herokuapp.com/)
 
