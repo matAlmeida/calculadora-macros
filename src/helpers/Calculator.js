@@ -7,12 +7,12 @@ class Calculator {
     this.userHeight = userForm.fieldHeight;
     this.userFat = userForm.fieldCorporalFat;
 
-    this.calcDefictType = userForm.selectCalc;
-    this.calcType = userForm.selectCalcType;
-    this.calcFat = macroForm.fieldGperKgFat;
-    this.calcProtein = macroForm.fieldGperKgProtein;
-    this.calcDefict = macroForm.fieldCaloricDefict;
-    this.calcExcercise = macroForm.fieldExcerciseTime;
+    this._calcDefictType = userForm.selectCalc;
+    this._calcType = userForm.selectCalcType;
+    this._calcFat = macroForm.fieldGperKgFat;
+    this._calcProtein = macroForm.fieldGperKgProtein;
+    this._calcDefict = macroForm.fieldCaloricDefict;
+    this._calcExcercise = macroForm.fieldExcerciseTime;
 
     this.resultTMB = 0;
     this.resultCarbo = 0;
@@ -30,12 +30,12 @@ class Calculator {
     this.userHeight = userForm.fieldHeight;
     this.userFat = userForm.fieldCorporalFat;
 
-    this.calcDefictType = userForm.selectCalc;
-    this.calcType = userForm.selectCalcType;
-    this.calcFat = macroForm.fieldGperKgFat;
-    this.calcProtein = macroForm.fieldGperKgProtein;
-    this.calcDefict = macroForm.fieldCaloricDefict;
-    this.calcExcercise = macroForm.fieldExcerciseTime;
+    this._calcDefictType = userForm.selectCalc;
+    this._calcType = userForm.selectCalcType;
+    this._calcFat = macroForm.fieldGperKgFat;
+    this._calcProtein = macroForm.fieldGperKgProtein;
+    this._calcDefict = macroForm.fieldCaloricDefict;
+    this._calcExcercise = macroForm.fieldExcerciseTime;
   }
 
   calculate() {
@@ -70,31 +70,31 @@ class Calculator {
   }
 
   calcDailyCal() {
-    const fact = 0.086 * this.calcExcercise * this.userWeight;
+    const fact = 0.086 * this._calcExcercise * this.userWeight;
     this.resultDailyCal =
-      this.calcType === 'withCorporalFat'
+      this._calcType === 'withCorporalFat'
         ? this.calcTMB() + fact
         : this.calcTMBmix() + fact;
   }
 
   calcFat() {
-    this.resultFat = this.calcFat * this.userWeight;
+    this.resultFat = this._calcFat * this.userWeight;
   }
 
   calcProtein() {
-    this.resultProtein = this.calcProtein * this.userWeight;
+    this.resultProtein = this._calcProtein * this.userWeight;
   }
 
   calcFiber() {
-    if (this.calcDefictType !== 'loseWeight') {
-      this.calcDefict *= -1;
+    if (this._calcDefictType !== 'loseWeight') {
+      this._calcDefict *= -1;
     }
 
-    this.resultFiber = (this.resultDailyCal - this.calcDefict) / 1000 * 15;
+    this.resultFiber = (this.resultDailyCal - this._calcDefict) / 1000 * 15;
   }
 
   calcCarbo() {
-    const remainingCal = this.resultDailyCal - this.calcDefict;
+    const remainingCal = this.resultDailyCal - this._calcDefict;
     const fatCal = this.resultFat * 9;
     const proteinCal = this.resultProtein * 4;
     this.resultCarbo = (remainingCal - (fatCal + proteinCal)) / 4;
